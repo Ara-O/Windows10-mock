@@ -1,6 +1,12 @@
 <template>
   <main>
-    <h3>op</h3>
+    <div class="mini-folder">
+      <img src="../assets/foldericon.png" alt="Folder icon" class="folder" />
+      <h5>Thanks to you</h5>
+    </div>
+    <section class="time">
+      <h3>hlo</h3>
+    </section>
   </main>
 </template>
 
@@ -12,3 +18,5 @@ export default {
   components: {},
 };
 </script>
+
+<style scoped src="../styles/lockscreen.css"></style>

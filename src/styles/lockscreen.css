@@ -1,0 +1,34 @@
+main {
+  height: 100vh;
+  background: linear-gradient(#2727274a, #2727274a),
+    url(/img/simpson.a5bc4b61.jpg);
+  background-size: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.folder {
+  width: 45px;
+  filter: brightness(5.5) contrast(3.5);
+}
+
+.mini-folder {
+  margin-left: 41px;
+  margin-top: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.mini-folder h5 {
+  color: white;
+  font-family: "Segoe UI Light";
+
+  font-weight: 100;
+}
+
+.time {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
