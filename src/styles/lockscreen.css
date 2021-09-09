@@ -1,7 +1,6 @@
 main {
   height: 100vh;
-  background: linear-gradient(#2727274a, #2727274a),
-    url(/img/simpson.a5bc4b61.jpg);
+  background: linear-gradient(#2727274a, #2727274a), url(../assets/simpson.jpg);
   background-size: 100%;
   overflow: hidden;
   position: relative;
@@ -23,12 +22,52 @@ main {
 .mini-folder h5 {
   color: white;
   font-family: "Segoe UI Light";
-
   font-weight: 100;
 }
 
 .time {
   display: block;
   position: absolute;
-  bottom: 0px;
+  bottom: 53px;
+  margin-left: 41px;
+}
+
+.time h3 {
+  margin-bottom: 28px;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 0px;
+  font-size: 103px;
+  font-family: "Segoe UI Light";
+}
+
+.time h4 {
+  color: white;
+  font-weight: 100;
+  margin-bottom: 34px;
+  margin-top: 0px;
+  font-size: 40px;
+  font-family: "Segoe UI Light";
+}
+
+.time h5 {
+  color: white;
+  font-weight: 100;
+  font-family: "Segoe UI Light";
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: 13px;
+}
+
+.icons {
+  display: flex;
+  position: absolute;
+  right: 34px;
+  bottom: 27px;
+  column-gap: 19px;
+}
+
+.icons img {
+  width: 30px;
+  cursor: pointer;
 }

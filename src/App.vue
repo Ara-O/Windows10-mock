@@ -17,7 +17,7 @@
 }
 @font-face {
   font-family: "Segoe UI Light";
-  src: url("./assets/segoe4.ttf");
+  src: url("./assets/segoelight.ttf");
 }
 
 * {
