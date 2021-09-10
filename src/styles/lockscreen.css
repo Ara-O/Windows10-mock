@@ -1,9 +1,22 @@
 main {
   height: 100vh;
-  background: linear-gradient(#2727274a, #2727274a), url(../assets/simpson.jpg);
   background-size: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.bg-image {
+  /* The image used */
+  background: linear-gradient(#2727274a, #2727274a), url(../assets/simpson.jpg);
+  filter: blur(3px);
+  height: 100%;
+  /* width: 102%; */
+  transform: scale(1.03);
+  transition: filter 600ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .folder {
@@ -30,6 +43,7 @@ main {
   position: absolute;
   bottom: 53px;
   margin-left: 41px;
+  transition: all 800ms ease;
 }
 
 .time h3 {
@@ -65,9 +79,71 @@ main {
   right: 34px;
   bottom: 27px;
   column-gap: 19px;
+  transition: all 800ms ease;
 }
 
 .icons img {
   width: 30px;
   cursor: pointer;
+}
+
+.password--section {
+  position: absolute;
+  height: 100vh;
+  background: transparent;
+  top: 0px;
+  display: none;
+  justify-content: center;
+  width: 100vw;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.user-img {
+  width: 187px;
+  border-radius: 110px;
+}
+
+.user-name {
+  font-weight: 300;
+  font-family: "Segoe UI Light";
+  font-size: 37px;
+  margin-bottom: 22px;
+}
+
+.input-password {
+  height: 34px;
+  width: 259px;
+  border: none;
+  padding: 5px 24px;
+  font-size: 23px;
+}
+
+.password-section {
+  display: flex;
+}
+
+.continueicon {
+  width: 24px;
+}
+
+.continue {
+  background: #ffffff52;
+  width: 46px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.hint {
+  font-family: "Segoe UI Light";
+  font-weight: 100;
+  font-size: 15px;
+  margin-top: 12px;
+  margin-bottom: 0px;
 }
