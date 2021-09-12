@@ -12,8 +12,8 @@ main {
   height: 100%;
   /* width: 102%; */
   transform: scale(1.03);
-  transition: filter 600ms ease-in-out;
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, filter 600ms ease-in-out;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,11 +116,11 @@ main {
 }
 
 .input-password {
-  height: 34px;
+  height: 29px;
   width: 259px;
   border: none;
-  padding: 5px 24px;
-  font-size: 23px;
+  padding: 5px 18px;
+  font-size: 18px;
 }
 
 .password-section {
@@ -146,4 +146,34 @@ main {
   font-size: 15px;
   margin-top: 12px;
   margin-bottom: 0px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+
+  40% {
+    transform: rotate(100deg);
+  }
+
+  99% {
+    transform: rotate(360deg);
+  }
+}
+
+img.loading {
+  width: 30px;
+  animation: rotate 3s linear infinite;
+}
+
+.loadingsection {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.loadingsection span {
+  font-family: "Segoe Ui Light";
+  font-weight: 200;
 }
