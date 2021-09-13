@@ -1,0 +1,117 @@
+main {
+  background: url(../assets/homescreenbg.jpg);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-size: 100%;
+  margin: 0px;
+  filter: brightness(0);
+  transition: filter 500ms ease-in-out;
+  min-width: 1368px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 48px 344px 2.7fr 1fr 5px;
+  background: rgb(138 138 138 / 24%);
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  width: 100vw;
+  overflow: hidden;
+  backdrop-filter: blur(7px);
+}
+
+img.windowsicon {
+  width: 22px;
+}
+
+.windowsicondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchinput {
+  background: #383838;
+  font-family: "Segoe UI Light";
+  border-radius: 0px;
+  font-weight: 200;
+  font-size: 15.5px;
+  padding-left: 39px;
+  color: white;
+  border: solid 0.5px rgb(102, 102, 102);
+  border-bottom: 0;
+}
+
+.searchinput:focus {
+  outline: none;
+}
+
+.searchinput::placeholder {
+  color: white;
+}
+
+.searchinput:hover {
+  border: solid 3px rgb(107, 107, 107);
+  background: #4b4b4b;
+}
+
+.taskbaricon {
+  width: 17px;
+}
+.taskbaricon2 {
+  width: 17px;
+  padding-top: 4px;
+}
+
+.cortana {
+  filter: blur(0.3px);
+}
+
+.appsicon {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 44px;
+  width: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.windowsicondiv:hover {
+  background: #323232b0;
+}
+
+img.search {
+  width: 18px;
+  position: absolute;
+  left: 61px;
+  transform: rotate(90deg);
+  top: 16px;
+}
+
+.utilityicon {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.mini-date {
+  margin: 0px;
+  color: white;
+  font-family: "Segoe Ui Light";
+  font-weight: 100;
+  font-size: 11.6px;
+  margin-left: 20px;
+  line-height: 18px;
+  margin-bottom: 2px;
+}
+
+.removeall {
+  border-left: 1px solid gray;
+}
