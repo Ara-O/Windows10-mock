@@ -1,5 +1,9 @@
 <template>
   <main>
+    <div class="homescreenicon">
+      <img src="@/assets/appicons/trashicon.png" alt="Trashicon" />
+      <h5>Recycle Bin</h5>
+    </div>
     <footer>
       <div class="windowsicondiv">
         <img :src="windowsicon" alt="Windows Icon" class="windowsicon" />
@@ -16,7 +20,7 @@
       />
       <!-- APP ICON SECTION -->
       <div class="appsicon">
-        <div class="icon" >
+        <div class="icon">
           <img
             src="../assets/appicons/cortanaicon.png"
             alt="Cortana logo"
@@ -118,6 +122,7 @@
 <style scoped src="@/styles/homescreen.css"></style>
 
 <script>
+import interact from "interactjs";
 export default {
   data() {
     return {
@@ -126,6 +131,48 @@ export default {
   },
 
   mounted() {
+    // var element = document.querySelector(".homescreenicon");
+    // var x = 0;
+    // var y = 0;
+
+    // interact(element)
+    //   .draggable({
+    //     modifiers: [
+    //       interact.modifiers.snap({
+    //         targets: [interact.snappers.grid({ x: 60, y: 60 })],
+    //         range: Infinity,
+    //         relativePoints: [{ x: 0, y: 0 }],
+    //       }),
+    //       interact.modifiers.restrict({
+    //         restriction: element.parentNode,
+    //         elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+    //         endOnly: true,
+    //       }),
+    //     ],
+    //     inertia: true,
+    //   })
+    //   .on("dragmove", function (event) {
+    //     x += event.dx;
+    //     y += event.dy;
+
+    //     event.target.style.transform = "translate(" + x + "px, " + y + "px)";
+    //   });
+    const position = { x: 0, y: 0 };
+
+    interact(".homescreenicon").draggable({
+      listeners: {
+        start(event) {
+          console.log(event.type, event.target);
+        },
+        move(event) {
+          position.x += event.dx;
+          position.y += event.dy;
+
+          event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
+        },
+      },
+    });
+    //---------------
     document
       .querySelector(".windowsicondiv")
       .addEventListener("mouseover", function () {
@@ -160,8 +207,6 @@ export default {
         element.closest(".icon").style.background = "transparent";
       });
     });
-
-   
   },
 };
 </script>
