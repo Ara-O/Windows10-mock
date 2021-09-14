@@ -7,7 +7,8 @@ main {
 
 .bg-image {
   /* The image used */
-  background: linear-gradient(#2727274a, #2727274a), url(../assets/simpson.jpg);
+  background: linear-gradient(#2727274a, #2727274a),
+    url("../assets/simpson.jpg");
   filter: blur(3px);
   height: 100%;
   /* width: 102%; */
