@@ -1,4 +1,4 @@
-# windows10
+# Windows 10 Mockup
 
 ## Project setup
 ```
