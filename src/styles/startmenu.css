@@ -34,6 +34,14 @@
   align-items: center;
 }
 
+.bottomicondiv:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(83, 83, 83, 0.489),
+    rgba(128, 128, 128, 0.489)
+  );
+}
+
 .bottomicons {
   position: absolute;
   bottom: -7px;
@@ -69,6 +77,12 @@
   display: flex;
   align-items: center;
   column-gap: 10px;
+  width: 227px;
+  padding-left: 5px;
+}
+
+.appdiv:hover {
+  background: radial-gradient(#39393a, #303030);
 }
 
 .appdiv .applogo {
@@ -86,6 +100,10 @@
 }
 
 .tile:hover {
+  background: linear-gradient(134deg, #63636347, #424242);
+}
+
+.tile:hover {
   box-shadow: inset 0px 0px 0px 2px rgb(172, 172, 172);
 }
 
@@ -98,8 +116,8 @@
   font-weight: 100;
   font-family: "Segoe UI Light";
   position: absolute;
-  font-size: 12px;
-  bottom: -6px;
+  font-size: 13px;
+  bottom: -7px;
   left: 11px;
 }
 

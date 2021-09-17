@@ -61,11 +61,29 @@
           margin-top: 7px;
           font-weight: 100;
           font-family: 'Segoe UI Light';
-          font-size: 16px;
+          font-size: 13px;
+          margin-bottom: 9px;
         "
       >
-        #
+        C
       </h6>
+      <div class="appdiv">
+        <img
+          src="@/assets/appicons/calculator.png"
+          alt="Calculator logo"
+          class="applogo"
+        />
+        <h6
+          style="
+            font-weight: 100;
+            font-family: 'Segoe Ui Light';
+            font-size: 13px;
+            margin: 10px 0px;
+          "
+        >
+          Calculator
+        </h6>
+      </div>
     </div>
     <div class="rightsection">
       <h6 class="recentlyadded">Productivity</h6>
@@ -94,6 +112,15 @@
           />
           <h4 class="tiledesc">Todo</h4>
         </div>
+      </div>
+      <h6 class="recentlyadded" style="margin-bottom: 15px">Explore</h6>
+      <div class="tile">
+        <img
+          src="../assets/appicons/microsoftstore.png"
+          alt="Todo icon"
+          class="tileimage"
+        />
+        <h4 class="tiledesc">Store</h4>
       </div>
     </div>
   </section>

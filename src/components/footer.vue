@@ -114,8 +114,8 @@
         "
         class="utilityicon"
       >
-        <h5 class="mini-date">2:11 PM</h5>
-        <h5 class="mini-date">9/12/2021</h5>
+        <h5 class="mini-date">{{ time }}</h5>
+        <h5 class="mini-date">{{ date }}</h5>
       </div>
       <div class="utilityicon">
         <img
@@ -143,10 +143,33 @@ export default {
   },
 
   data() {
-    return { windowsicon: require("../assets/appicons/windowsicon.png") };
+    return {
+      time: "",
+      date: "",
+      windowsicon: require("../assets/appicons/windowsicon.png"),
+    };
   },
 
   mounted() {
+    let that = this;
+    setInterval(function () {
+      var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var newformat = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      that.time = hours + ":" + minutes + " " + newformat;
+      that.date =
+        new Date().getMonth() +
+        1 +
+        "/" +
+        date.getDate() +
+        "/" +
+        date.getFullYear();
+    }, 8000);
+
     document
       .querySelector(".windowsicondiv")
       .addEventListener("click", function () {
