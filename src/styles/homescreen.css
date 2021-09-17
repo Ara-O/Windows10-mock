@@ -156,20 +156,3 @@ img.search {
 .removeall:hover {
   background-color: rgb(128 128 128 / 20%);
 }
-
-.bottomicons {
-  position: absolute;
-  bottom: 8px;
-  justify-content: center;
-  display: flex;
-  width: 45px;
-  height: auto;
-  align-items: center;
-  flex-direction: column;
-  padding: 12px 0px;
-}
-
-.startmenuicon {
-  width: 20px;
-  padding: 12px 0px;
-}

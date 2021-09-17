@@ -1,27 +1,5 @@
 <template>
-  <section class="startmenu">
-    <div>
-      <img
-        src="../assets/appicons/hamburgericon.png"
-        alt="Hamburger icon"
-        class="hamburgericon"
-      />
-      <div class="bottomicons">
-        <img
-          src="@/assets/appicons/settingsicon.png"
-          alt="Settings Icon"
-          class="startmenuicon"
-        />
-        <img
-          src="@/assets/appicons/shutdownicon.png"
-          alt="Shutdown Icon"
-          class="startmenuicon"
-        />
-      </div>
-    </div>
-    <div></div>
-    <div></div>
-  </section>
+  <startmenu></startmenu>
   <footer>
     <div class="windowsicondiv">
       <img :src="windowsicon" alt="Windows Icon" class="windowsicon" />
@@ -155,36 +133,15 @@
 </template>
 
 <style scoped src="../styles/homescreen.css"></style>
-<style scoped>
-.startmenu {
-  height: 630px;
-  width: 640px;
-  position: relative;
-  left: 0px;
-  bottom: -630px;
-  transition: bottom 200ms linear, background 4s linear;
-  display: grid;
-  grid-template-columns: 45px 1fr 1fr;
-  background: transparent;
-  filter: brightness(0);
-}
-
-.position {
-  bottom: 45px;
-  background: linear-gradient(rgb(53 53 53 / 94%), #272728);
-  filter: brightness(1);
-}
-
-.hamburgericon {
-  left: 15px;
-  top: 15px;
-  width: 19px;
-  position: absolute;
-}
-</style>
+<style scoped src="../styles/startmenu.css"></style>
 
 <script>
+import startmenu from "../components/startmenu.vue";
 export default {
+  components: {
+    startmenu,
+  },
+
   data() {
     return { windowsicon: require("../assets/appicons/windowsicon.png") };
   },
@@ -195,6 +152,8 @@ export default {
       .addEventListener("click", function () {
         console.log("potata");
         document.querySelector(".startmenu").classList.toggle("position");
+        // document.querySelector(".windowsicondiv").style.background =
+        //   "rgb(74 74 74)";
         // document.querySelector(".startmenu").style.bottom = "20px";
       });
   },
