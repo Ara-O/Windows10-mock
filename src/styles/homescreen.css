@@ -135,7 +135,7 @@ img.search {
 }
 
 .homescreenicon:hover {
-  background-color: rgb(59 58 110);
+  background-color: rgb(59 58 110 / 77%);
   box-shadow: inset 0px 0px 1px rgb(58, 58, 255);
 }
 

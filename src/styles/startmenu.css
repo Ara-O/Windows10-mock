@@ -62,6 +62,8 @@
 .allapps {
   color: white;
   margin-left: 25px;
+  padding-top: 25px;
+  transition: all ease-in 250ms;
 }
 
 .recentlyadded {
@@ -78,7 +80,6 @@
   align-items: center;
   column-gap: 10px;
   width: 227px;
-  padding-left: 5px;
 }
 
 .appdiv:hover {

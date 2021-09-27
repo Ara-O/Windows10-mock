@@ -114,7 +114,9 @@
         "
         class="utilityicon"
       >
-        <h5 class="mini-date">{{ time }}</h5>
+        <h5 class="mini-date" style="margin-top: -3px !important">
+          {{ time }}
+        </h5>
         <h5 class="mini-date">{{ date }}</h5>
       </div>
       <div class="utilityicon">
@@ -125,11 +127,13 @@
           style="width: 39px"
           onmouseover="this.style.background='rgb(128 128 128 / 20%)'"
           onmouseleave="this.style.background='transparent'"
+          @click="showNotifications"
         />
       </div>
     </div>
     <div class="removeall"></div>
   </footer>
+  <notifications></notifications>
 </template>
 
 <style scoped src="../styles/homescreen.css"></style>
@@ -137,9 +141,12 @@
 
 <script>
 import startmenu from "../components/startmenu.vue";
+import notifications from "../components/notifications.vue";
+import getTime from "../modules/getTime";
 export default {
   components: {
     startmenu,
+    notifications,
   },
 
   data() {
@@ -150,34 +157,23 @@ export default {
     };
   },
 
+  methods: {
+    showNotifications() {
+      document
+        .querySelector(".notificationmenu")
+        .classList.toggle("notificationposition");
+    },
+  },
+
   mounted() {
-    let that = this;
-    setInterval(function () {
-      var date = new Date();
-      var hours = date.getHours();
-      var minutes = date.getMinutes();
-      var newformat = hours >= 12 ? "PM" : "AM";
-      hours = hours % 12;
-      hours = hours ? hours : 12;
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      that.time = hours + ":" + minutes + " " + newformat;
-      that.date =
-        new Date().getMonth() +
-        1 +
-        "/" +
-        date.getDate() +
-        "/" +
-        date.getFullYear();
-    }, 8000);
+    setInterval(getTime(this), 8000);
 
     document
       .querySelector(".windowsicondiv")
       .addEventListener("click", function () {
         console.log("potata");
         document.querySelector(".startmenu").classList.toggle("position");
-        // document.querySelector(".windowsicondiv").style.background =
-        //   "rgb(74 74 74)";
-        // document.querySelector(".startmenu").style.bottom = "20px";
+        document.querySelector(".allapps").style.paddingTop = "0px";
       });
   },
 };

@@ -95,7 +95,9 @@ export default {
         passwordsection.style.transform = "scale(1)";
         document.querySelector(".bg-image").style.transform = "scale(1.2)";
       }, 250);
-      document.querySelector(".bg-image").style.filter = "blur(4px)";
+      document.querySelector(".password--section").style.backdropFilter =
+        "blur(19px)";
+      // document.querySelector(".bg-image").style.filter = "blur(4px)";
       passwordsection.style.display = "flex";
       password.focus();
       setTimeout(removePasswordSection, 15000);
