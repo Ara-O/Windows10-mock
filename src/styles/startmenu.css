@@ -83,7 +83,7 @@
 }
 
 .appdiv:hover {
-  background: radial-gradient(#39393a, #303030);
+  background: linear-gradient(#303030, #303030);
 }
 
 .appdiv .applogo {
