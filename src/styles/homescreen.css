@@ -62,7 +62,6 @@ img.windowsicon {
 }
 .taskbaricon2 {
   width: 17px;
-  padding-top: 4px;
 }
 
 .cortana {
@@ -155,4 +154,34 @@ img.search {
 
 .removeall:hover {
   background-color: rgb(128 128 128 / 20%);
+}
+
+.upicondiv {
+  height: 93px;
+  background: #44414196;
+  padding: 10px 3px;
+  border: solid 0.5px #000000;
+  position: absolute;
+  bottom: -45px;
+  display: none;
+  box-sizing: border-box;
+  right: 201px;
+  width: 117px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+.upicondiv img {
+  width: 24px;
+}
+
+.batteryicon2 {
+  width: 20px !important;
+}
+
+.upiconposition {
+  display: flex;
+  bottom: 45px;
 }

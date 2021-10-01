@@ -1,5 +1,17 @@
 <template>
   <startmenu></startmenu>
+  <div class="upicondiv">
+    <img
+      src="https://4.bp.blogspot.com/-fMqFoxy7M0I/VxUyXB7QHfI/AAAAAAAAGCw/wDy8YmUnWz8uM_XuRyIF4NiOGVYBllwXwCLcB/s1600/icon-bluetooth.png"
+      alt="Bluetooth Icon"
+      class="bluetoothicon2"
+    />
+    <img
+      src="../assets/batteryicon.png"
+      alt="Battery Icon"
+      class="batteryicon2"
+    />
+  </div>
   <footer>
     <div class="windowsicondiv">
       <img :src="windowsicon" alt="Windows Icon" class="windowsicon" />
@@ -11,6 +23,7 @@
     />
     <input type="text" class="searchinput" placeholder="Type here to search" />
     <!-- APP ICON SECTION -->
+
     <div class="appsicon">
       <div class="icon">
         <img
@@ -64,16 +77,15 @@
         />
       </div>
     </div>
-
     <div
       class="utilityicondiv"
       style="display: flex; align-items: center; margin-left: 30px"
     >
-      <div class="utilityicon">
+      <div class="utilityicon" @click="upicon">
         <img
           src="@/assets/appicons/upicon.png"
           alt="Up icon"
-          class="taskbaricon2"
+          class="taskbaricon2 upicon2"
           style="width: 15px"
           title="Show hidden icons"
         />
@@ -162,6 +174,10 @@ export default {
       document
         .querySelector(".notificationmenu")
         .classList.toggle("notificationposition");
+    },
+
+    upicon() {
+      document.querySelector(".upicondiv").classList.toggle("upiconposition");
     },
   },
 
