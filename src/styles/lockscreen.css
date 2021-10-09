@@ -116,16 +116,36 @@ main {
   margin-bottom: 22px;
 }
 
+/* font-size: 15px  */
+
 .input-password {
-  height: 29px;
+  height: 42px;
   width: 259px;
   border: none;
-  padding: 5px 18px;
-  font-size: 18px;
+  padding: 6px 48px 7px 12px;
+  font-size: 23px; 
+  font-weight: 100;
+  font-family: 'Segoe UI Light';
+  box-sizing: border-box;
 }
 
 .password-section {
   display: flex;
+  position: relative;
+}
+
+.seePassword{
+  width: 16px;
+  position: absolute;
+  right: 62px;
+  top: 16.5px;
+  filter: opacity(0.4);
+  cursor: pointer;
+  display: none;
+}
+
+.seePassword:hover{
+  filter: opacity(0.6);
 }
 
 .continueicon {

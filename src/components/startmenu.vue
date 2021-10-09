@@ -28,7 +28,7 @@
             class="startmenuicon"
           />
         </div>
-        <div class="bottomicondiv">
+        <div class="bottomicondiv" @click="lockPage">
           <img
             src="@/assets/appicons/shutdownicon.png"
             alt="Shutdown Icon"
@@ -128,3 +128,13 @@
 
 <style scoped src="../styles/homescreen.css"></style>
 <style scoped src="../styles/startmenu.css"></style>
+
+<script>
+export default {
+  methods: {
+    lockPage(){
+      this.$router.push("/")
+    }
+  }
+}
+</script>

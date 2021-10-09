@@ -3,7 +3,7 @@
     <div class="bg-image"></div>
 
     <section class="time">
-      <h3>10:32</h3>
+      <h3>{{currentdate}}</h3>
       <h4>Monday, September 5</h4>
       <h5>Intro to Engineering</h5>
       <h5>Engineering 220</h5>
@@ -17,10 +17,12 @@
       <img src="../assets/userimage.jpg" alt="User image" class="user-img" />
       <h3 class="user-name">Ara Oladipo</h3>
       <div class="password-section" v-if="notcontinuing">
+        <img src="../assets/showPassword.png" alt="See password" class="seePassword" @click="showPassword">
         <input
           type="password"
           class="input-password"
           @keyup.enter="continueon"
+          @input="seePasswordIcon"
         />
         <span class="continue" @click="continueon"
           ><img
@@ -46,14 +48,17 @@
 
 <script>
 // @ is an alias to /src
-
+import {lockScreenDate} from '../modules/getTime';
 export default {
   name: "Home",
   components: {},
   data() {
     return {
       notcontinuing: true,
+      currentdate: "",
+      passwordVisible: false,
     };
+
   },
 
   created() {
@@ -64,6 +69,8 @@ export default {
   },
 
   mounted() {
+    this.currentdate = lockScreenDate()
+
     const time = document.querySelector(".time");
     const icons = document.querySelector(".icons");
     const passwordsection = document.querySelector(".password--section");
@@ -119,6 +126,23 @@ export default {
         }, 1000);
       }
     },
+
+    seePasswordIcon(){
+      const seePasswordIcon =  document.querySelector(".seePassword");
+      seePasswordIcon.style.display = "block"
+    },
+
+    showPassword(){
+      const input = document.querySelector(".input-password");
+      this.passwordVisible = !this.passwordVisible;
+      if(this.passwordVisible){
+        input.style.fontSize = "15px"
+        input.type = "text";
+        } else {
+           input.style.fontSize = "23px"
+        input.type = "password";
+        }
+    }
   },
 };
 </script>

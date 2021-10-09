@@ -112,8 +112,9 @@
 
 .reconnectdrive {
   color: white;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Light";
   font-weight: 100;
+  text-shadow: 0 0 0px white;
 }
 
 .bottomtoggles {

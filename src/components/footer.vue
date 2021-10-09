@@ -154,7 +154,7 @@
 <script>
 import startmenu from "../components/startmenu.vue";
 import notifications from "../components/notifications.vue";
-import getTime from "../modules/getTime";
+import {homePageDate} from "../modules/getTime";
 export default {
   components: {
     startmenu,
@@ -182,7 +182,7 @@ export default {
   },
 
   mounted() {
-    setInterval(getTime(this), 8000);
+    setInterval(homePageDate(this), 8000);
 
     document
       .querySelector(".windowsicondiv")
