@@ -1,4 +1,6 @@
-# Windows 10 Mockup
+# Windows 10 Mockup 🖥️
+
+<h5>A side project to simulate how Windows 10 looks</h5>
 
 ## Project setup
 ```
